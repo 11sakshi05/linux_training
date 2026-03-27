@@ -1,0 +1,68 @@
+
+BASHSCRIPT
+GNU nano 8.1                                                                    
+#!/bin/bash
+
+mkdir A
+mkdir B
+mkdir C
+mkdir A/Test
+
+touch B/file1.txt
+touch B/file2.txt
+touch B/file3.txt
+
+cd B
+cp file1.txt ../C/
+mv file2.txt ../C/
+rm file3.txt
+cd ..
+pwd
+cd A
+pwd
+cd ..
+tree
+touch A/data.txt
+cd A
+echo "Linux Linux Linux Linux Linux. Linux is OpenSource.Linux is POwerful" > data.txt
+grep "Linux" data.txt
+
+touch f1.txt f2.txt f3.txt f4.txt
+rm *.txt
+
+echo "Enter name..."
+read n
+
+
+
+OUTPUT
+
+echo "Welcome $n"[root@ip-172-31-32-54 LabWork]# nano script.sh
+[root@ip-172-31-32-54 LabWork]# ./script.sh
+mkdir: cannot create directory ‘A’: File exists
+mkdir: cannot create directory ‘B’: File exists
+mkdir: cannot create directory ‘C’: File exists
+mkdir: cannot create directory ‘A/Test’: File exists
+/root/LabWork
+/root/LabWork/A
+.
+├── A
+│   └── Test
+├── B
+│   └── file1.txt
+├── C
+│   ├── file1.txt
+│   └── file2.txt
+└── script.sh
+
+5 directories, 4 files
+Linux Linux Linux Linux Linux. Linux is OpenSource.Linux is POwerful
+Enter name...
+sakshi
+Welcome sakshi
+
+
+
+
+
+
