@@ -25,7 +25,8 @@ tree
 touch A/data.txt
 cd A
 echo "Linux Linux Linux Linux Linux. Linux is OpenSource.Linux is POwerful" > data.txt
-grep "Linux" data.txt
+#grep "Linux" data.txt
+grep --color=always "Linux" data.txt #to add color 
 
 touch f1.txt f2.txt f3.txt f4.txt
 rm *.txt
